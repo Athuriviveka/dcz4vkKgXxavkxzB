@@ -1,4 +1,4 @@
-import StandardScaler as StandardScaler
+# import StandardScaler as StandardScaler
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -14,7 +14,7 @@ train = df[msk]
 test = df[~msk]
 print(test.head())
 
-features = ['X1', 'X2', 'X3', 'X4', 'x5', 'X6']
+features = ['X1', 'X2', 'X3', 'X4', 'X5', 'X6']
 target = ['Y']
 
 # Split into test and train
@@ -23,10 +23,10 @@ y_train = train[target].to_numpy()
 X_test = test[features]
 y_test = test[target].to_numpy()
 
-# Normalize Features
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.fit_transform(X_test)
+# # Normalize Features
+# scaler = StandardScaler()
+# X_train = scaler.fit_transform(X_train)
+# X_test = scaler.fit_transform(X_test)
 
 
 def run_model(model, X_train, y_train, X_test, y_test, verbose=True):
